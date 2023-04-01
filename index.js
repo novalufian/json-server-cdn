@@ -29,9 +29,10 @@ const dbData = {
 }
 const router = jsonServer.router(dbData)
 const middlewares = jsonServer.defaults()
+const port = process.env.PORT || 4000;
 
 server.use(middlewares)
 server.use(router)
-server.listen(3005, () => {
+server.listen(, (port) => {
   console.log('JSON Server is running')
 })
